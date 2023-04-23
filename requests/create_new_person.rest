@@ -1,4 +1,4 @@
-POST http://localhost:3001/api/persons/
+POST https://phonebook-backend-yg9r.onrender.com/api/persons/
 Content-Type: application/json
 
 {"name":"Bruno Fernades", "number":"091-6789-001"}
