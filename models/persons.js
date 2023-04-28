@@ -11,9 +11,27 @@ mongoose
     console.log("error connecting to MongoDB", error.message);
   });
 
+const validateFn = (val) => {
+  return /^\d{2,3}-\d{5,10}$/.test(val);
+};
+
+const validate = [
+  validateFn,
+  `{PATH} format must be 09-1234556 or 040-22334455`,
+];
+
 const personSchema = new mongoose.Schema({
-  name: String,
-  number: String,
+  name: {
+    type: String,
+    minLength: [3, "name must be minimum three (3) charaters long"],
+    required: [true, "name is required"],
+  },
+  number: {
+    type: String,
+    minLength: [8, "must be minimum 8 numbers"],
+    validate: validate,
+    required: [true, "number is required"],
+  },
 });
 
 personSchema.set("toJSON", {
