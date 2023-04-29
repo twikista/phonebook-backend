@@ -1,0 +1,14 @@
+{
+    "prettier.singleQuote": true,
+    "prettier.semi": false,
+    "prettier.tabWidth": 1,
+    "prettier.enable": false,
+    "prettier.embeddedLanguageFormatting": "off",
+    "prettier.useEditorConfig": false,
+    "javascript.format.enable": true,
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+      },
+    "html.format.contentUnformatted": ""
+}
