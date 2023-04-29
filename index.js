@@ -67,14 +67,6 @@ app.delete('/api/persons/:id', (request, response, next) => {
 app.post('/api/persons', (request, response, next) => {
   const { name, number } = request.body
 
-  // if (!name) {
-  //   return response.status(400).json({ error: 'name is required' })
-  // }
-
-  // if (!number) {
-  //   return response.status(400).json({ error: 'number is required' })
-  // }
-
   const person = new Person({
     name,
     number,
